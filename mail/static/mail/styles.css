@@ -1,3 +1,47 @@
+body {
+    font-size: 1rem;
+}
+
 textarea {
     min-height: 400px;
+}
+
+#compose-error {
+    color: red;
+}
+
+.mail-list {
+    padding-left: 20px;
+}
+
+.mail-row {
+    display: table-row;
+}
+
+.mail-cell {
+    display: table-cell;
+    padding: 3px 1rem 0 0;
+    border-bottom: 1px solid blue;
+}
+
+.mail-item {
+    cursor: pointer;
+}
+
+.mail-item:hover {
+    color: rgb(116, 116, 116);
+}
+
+.unread {
+    font-weight: 700;
+}
+
+.text-from label,
+.text-to label,
+.text-subject label,
+.text-timestamp label,
+.text-body label {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
