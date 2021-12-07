@@ -75,20 +75,30 @@ function add_mail(data)
   switch (current_page) {
     case 'inbox':
       addButton(li, '<div data-archive="1">archive</div>');
-      addButton(li, '<div data-read="0">unread</div>');
+      addButton(li, getMarkLabel(data.read));
       break;
     case 'archive':
       addButton(li, '<div data-archive="0">unarchive</div>');
-      addButton(li, '<div data-read="0">unread</div>');
+      addButton(li, getMarkLabel(data.read));
       break;
     case 'sent':
-      addButton(li, '<div data-read="0">unread</div>');
+      addButton(li, getMarkLabel(data.read));
       break;
     default:
       break;
   }
 
   return li;
+}
+
+
+function getMarkLabel(state)
+{
+  if (state) {
+    return '<div data-read="0">mark unread</div>';
+  } else {
+    return '<div data-read="1">mark read</div>';
+  }
 }
 
 
